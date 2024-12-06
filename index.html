@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mobile First Page</title>
+		<link rel="stylesheet" href="./css/estilo.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rye&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/fontawesome-free-6.5.0-web/css/all.css" >
+	</head>
+
+	<body>
+		<header aria-label="Page header">
+			<div id="cabecera_centrada" >
+				<div class="header-izquierdo">
+					<img class="logo" src="./imagenes/fantasma.svg" alt="Logo Paranormal Film Festival">
+					<select class="idioma">
+						<option value="es">ES</option>
+						<option value="en">EN</option>
+					</select>
+				</div>
+				
+				<nav class="nav-menu" aria-label="Navigation menu">
+					<ul class="menu-links">
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./programacion.html">Programación</a></li>
+						<li><a href="./about.html">Sobre el festival</a></li>
+					</ul>
+				</nav>
+				
+				<div class="header-derecho">
+				
+					<div><a href="#home" id="icon1"><i class="fas fa-shopping-cart"></i></a> <a href="#home" class="icon-label"> Carro</a></div>
+					<div><a href="#home" id="icon2"><i class="fa-solid fa-user"></i></a> <a href="#home" class="icon-label"> Cuenta</a></div>
+					
+					<input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" >
+					<label for="abrir-cerrar" class="toggle-button">
+					
+						<span class="abrir" title="Abrir"></span>
+						<span class="cerrar" title="Cerrar">
+							<a href="./index.html">Home</a>
+							<a href="./programacion.html">Programación</a>
+							<a href="./about.html">Sobre el festival</a>
+						</span>
+						
+					</label>
+					
+				</div>
+			</div>
+			
+		</header>
+			
+		<main aria-label="Main content">
+		
+			<section id="banner" aria-label="Banner">
+				<div id="banner_title" class="container">
+					<h1>PARANORMAL FILM FESTIVAL</h1>
+				</div>
+			</section>
+			
+			<section id="carrusel" aria-label="Carrusel de logos">
+				<div id="logos_patrocinadores" class="container"></div>
+			</section>
+			
+			<section id="premiadas" aria-label="Películas premiadas">
+				<div id="premiadas_contenido" class="container">
+					<h2>PELÍCULAS PREMIADAS</h2>
+					<div class="articulos">
+						<article aria-label="Película premiada">
+							<a href=""><div class="poster1" aria-label="Poster película"></div></a>
+							<p class="texto_peli">11 de Noviembre de 2024</p>
+							<p class="titulo_peli">Evil dead 2</p>
+							<p class="texto_peli">Premio a la mejor comedia.</p>
+						</article>
+						<article aria-label="Película premiada">
+							<a href=""><div class="poster2" aria-label="Poster película"></div></a>
+							<p class="texto_peli">11 de Noviembre de 2024</p>
+							<p class="titulo_peli">Poltergeist</p>
+							<p class="texto_peli">Premio a la mejor película de terror.</p>
+						</article>
+						<article aria-label="Película premiada">
+							<a href=""><div class="poster3" aria-label="Poster película"></div></a>
+							<p class="texto_peli">11 de Noviembre de 2024</p>
+							<p class="titulo_peli">La cumbre escarlata</p>
+							<p class="texto_peli">Premio al mejor drama.</p>
+						</article>
+					</div>
+					<div class="enlace_bloque"><a href="">Más películas premiadas</a></div>
+				</div>
+			</section>
+			
+			<section id="accede_programacion" class="container" aria-label="Acceder a la programación">
+					<h2>Programación</h2>
+					<hr>
+					<p>Accéde a nuestra programación para encontrar todas las películas que se proyectaran en el festival. ¡Compra tu entrada!</p>
+					<button type="button">ACCEDER</button>
+			</section>
+		</main>
+		
+		<footer aria-label="Pie de página">
+		
+			<section id="suscrip_patroci" >
+				<div id="suscripcion">
+					<div id="newsletter_form" >
+					
+						<h2>SUSCRÍBETE A LA NEWSLETTER</h2>
+						<p>¡Suscríbete a nuestra newsletter para no perderte nada!</p>
+						<form action="Enviar" method="post">
+							
+							<label for="name" >Nombre*</label>
+							<input id="name" type="text" name="name" aria-label="Name" required>
+
+							<label for="lastname" >Apellido*</label>
+							<input id="lastname" type="text" name="lastname" aria-label="Name" required>
+
+							<label for="email" >Correo electrónico*</label>
+							<input id="email" type="email" name="email" aria-label="Email" required>
+							
+							<div id="privacidad">
+								<input id="check" type="checkbox" name="check" value="" required>
+								<label for="check" >He leído y entendido los términos y condiciones de privacidad.*</label>
+							</div>
+							
+							<button type="submit">ENVIAR</button>
+									
+						</form> 
+						<span>*Consulta los términos y la política de privacidad <a href="">aquí.</a></span>
+						<nav>
+							<ul id="social-list">
+								<li><a href="https://dribbble.com/" id="dribbble" class="social" aria-label="Dribbble"> <i class="fa-brands fa-dribbble"></i></a></li>
+								<li><a href="https://facebook.com/" id="facebook" class="social" aria-label="Facebook"> <i class="fa-brands fa-square-facebook"></i></a></li>
+								<li><a href="https://google.com/" id="google" class="social" aria-label="Google+"> <i class="fa-brands fa-google-plus-g"></i></a></li>
+								<li><a href="https://linkedin.com/" id="linkedin" class="social" aria-label="Linkedin"> <i class="fa-brands fa-linkedin"></i></a></li>
+								<li><a href="https://twitter.com/" id="twitter" class="social" aria-label="Twitter"> <i class="fa-brands fa-twitter"></i></a></li>
+								<li><a href="https://vk.com/" id="vk" class="social" aria-label="VK"> <i class="fab fa-vk"></i></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div id="patrocinadores">
+
+					<div id="patro_contenido" >
+						<h3>PATROCINADORES</h3>
+						<nav>
+							<ul id="empresas" aria-label="lista de empresas">
+								<li><a href="#home"><img src="./imagenes/mcdonalds.png" alt="McDonalds"></a></li>
+								<li><a href="#home"><img src="./imagenes/bmw.png" alt="BMW"></a></li>
+								<li><a href="#home"><img src="./imagenes/beats.png" alt="beats"></a></li>
+								<li><a href="#home"><img src="./imagenes/lg.png" alt="lg"></a></li>
+								<li><a href="#home"><img src="./imagenes/starbucks.png" alt="starbucks"></a></li>
+								<li><a href="#home"><img src="./imagenes/greek.png" alt="greek"></a></li>
+								<li><a href="#home"><img src="./imagenes/pinterest.png" alt="pinterest"></a></li>
+								<li><a href="#home"><img src="./imagenes/goodwill.png" alt="goodwill"></a></li>
+								<li><a href="#home"><img src="./imagenes/nba.png" alt="nba"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</section>
+			
+			<section id="enlacesV" aria-label="enlaces_varios">
+				<nav>
+					<ul id="lista_enlaces" aria-label="lista de enlaces">
+						<li><a href="#home">CONTACTO</a></li>
+						<li><a href="#home">AVISO LEGAL</a></li>
+						<li><a href="#home">POLÍTICA DE PRIVACIDAD</a></li>
+						<li><a href="#home">POLÍTICA DE COOKIES</a></li>
+					</ul>
+				</nav>
+			</section>
+			
+			<section id="cright" aria-label="Copy Right">
+				<p>2024 © Paranormal Film Festival</p>
+			</section>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

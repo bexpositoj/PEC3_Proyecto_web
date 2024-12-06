@@ -1,0 +1,661 @@
+
+
+
+/* Benjamín Expósito Jaramillo				  */
+/* PRACTICA FINAL - HTML y CSS                */
+/* GTIDM 2023								  */ 
+
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICION DEL CUERPO
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+* {	box-sizing: border-box; }/* incluir el padding y el borde en el ancho y alto total de los elementos */
+
+h2 {
+	font-family: "Inknut Antiqua", sans-serif;
+	line-height: 1.5em; /* Espació entre lineas */
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	gap: 5px;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #092F38;
+}
+
+button {
+	background-color: #1FA2C0; /* Color de fondo */
+	color: white; /* Color del texto */
+	padding: 3px 20px; /* Espaciado dentro del botón */
+	font-size: 13pt; /* Tamaño del texto */
+	font-weight: 600;
+	border: 2px solid black; /* Borde de 2px, color negro */
+	border-color: black;
+	border-radius: 25px; /* Bordes redondeados */
+	
+}
+
+button:hover {
+	background-color: #1FA2C0; /* Cambia el color cuando el ratón pasa sobre él */
+	border-color: white;
+}
+
+button:active {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reducida al hacer clic */
+	background-color: #093843;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14pt;
+	font-family: "Inter", sans-serif;
+	background-color: #050C14;
+}
+
+.container{
+	max-width: 1170px; /* Anchura maxima */
+	margin: 0 auto 0 auto; /* sin margenes verticales y con margenes horizontales automáticos */
+}
+
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICION DEL HEADER
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+body header {
+	position: fixed; /* Se define posición fija */
+	top: 0;
+	z-index: 99999; /* Indice Z, para mostrar el bloque por encima de todos los demas */
+	width: 100vw; /* Ancho del bloque del tamaño del viewport */
+	background-color: #1FA2C0;
+}
+
+#cabecera_centrada {
+	max-width: 1170px; /* Anchura maxima */
+	margin: auto; /* sin margenes verticales y con margenes horizontales automáticos */
+	height: 60px; /* Asegura una altura fija */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px; 
+}
+
+.header-izquierdo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.logo {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.idioma {
+	padding: 5px;
+	font-size: 1rem;
+	background-color: transparent; /* Quita el fondo */
+	border: none;
+	font-weight: 600;
+	font-family: "Inter", sans-serif;
+}
+
+option {
+  background-color: white;
+  color: black;
+  border: 0;
+}
+
+option:hover {
+  background-color: black;
+  color: white;
+}
+
+.header-derecho {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.header-derecho div {
+	display: flex;
+	align-items: center;
+}
+
+.header-derecho a {
+	font-size: 14px;
+}
+
+#icon1 {
+
+	border:1px solid black;
+	border-radius: 50%; /* Hace que el contenedor sea circular */
+	text-align:center;
+	padding: 3px 4px ;
+	background-color: #70D3EA;
+	width: 25px;
+	height: 25px;
+}
+
+#icon2 {
+	border:1px solid black;
+	border-radius: 50%; /* Hace que el contenedor sea circular */
+	text-align:center;
+	padding: 3px 6px ;
+	background-color: #70D3EA;
+	width: 25px;
+	height: 25px;
+}
+
+.icon-label {
+	display: none;
+	text-decoration: none;
+	color: #000;
+	margin-left: 4px;
+}
+
+.nav-menu {
+	display: flex;
+	align-items: center;
+}
+
+.menu-links {
+	display: none;
+}
+
+.mobile-menu {
+	display: none;
+	flex-direction: column;
+	background-color: #ddd;
+	padding: 10px;
+}
+
+.mobile-menu a {
+	padding: 10px;
+}
+
+/* Ocultamos el input y le damos estilos al label */
+
+input#abrir-cerrar { 
+	visibility:hidden;
+	position: absolute;
+	top: -9999px;
+}
+	
+.toggle-button {
+	display:block;
+	border-radius: 50%; /* Hace que el contenedor sea circular */
+	width:40px;
+	background-color: #70D3EA;
+	height:40px;
+	border:1px solid black;
+	position:relative;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+/* Usamos los :before y :after del label para dibujar las tres rayitas */
+	
+.toggle-button:before, .toggle-button:after {
+	position:absolute;
+	display:block;
+	content:" ";
+	width: 24px;		   
+	box-sizing: border-box;
+	left: 7px;
+	transition: all 0.2s ease-out;
+}
+	.toggle-button:before {
+	top: 10px;
+	height: 10px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	background-color: transparent;
+}
+
+.toggle-button:after {
+	height:2px;
+	background-color:black;
+	bottom:10px;
+}
+
+/* Hacemos clic y el input queda como :checked, así que los centramos y giramos 45º en distinto sentido 
+https://www.campusmvp.es/recursos/post/como-crear-un-boton-de-menu-hamburguesa-solo-con-css-sin-imagenes-ni-javascript.aspx */
+
+input#abrir-cerrar:checked + .toggle-button:before, input#abrir-cerrar:checked + .toggle-button:after {
+	top: 20px;
+	height:2px;
+	border-bottom:0;
+}
+
+input#abrir-cerrar:checked + .toggle-button:before {
+	transform: rotate(45deg); 
+}
+
+input#abrir-cerrar:checked + .toggle-button:after {
+	transform: rotate(-45deg);
+}
+	
+/* Posicionamos y mostramos cuando procede los <span> que nos ayudarán con los tooltips */
+
+.abrir {
+	display: block;
+}
+
+.cerrar {
+	display:none;
+	position: fixed; /* Se define posición fija */
+	top: 60px;
+	left: 0px;
+	margin: auto;
+	text-align: center;
+	z-index: 99999; /* Indice Z, para mostrar el bloque por encima de todos los demas */
+	width: 100vw; /* Ancho del bloque del tamaño del viewport */
+	height: 60px;
+	background-color: #1FA2C0;
+}
+
+input#abrir-cerrar:checked + .toggle-button .abrir {
+	display:none;
+}
+
+input#abrir-cerrar:checked + .toggle-button .cerrar {
+	display:flex;
+	justify-content: space-around;
+	gap: 20px;
+	align-items: center;
+	padding: 15px;
+	font-weight: bold;
+}   
+
+main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */}
+
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICION DEL BANNER
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+#banner {
+	background-image: url("../imagenes/header.jpg"); /* Imagen de fondo */
+	background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+	background-repeat: no-repeat; /* Evita que la imagen se repita */
+	background-position: center bottom; /* Centra horizontalmente y alinea con el borde inferior */
+	width: 100vw; /* Ancho del bloque del tamaño del viewport */
+	text-align: center; /* Centrar texto */ /* Centrar texto */
+	color: white; /* Color de la fuente */
+	padding-top: 3em; /* Relleno */
+	padding-bottom: 160px; /* Relleno */
+}
+
+#banner h1 {
+	font-family: "Rye", serif;
+	font-size: 32pt; /* Tamaño de fuente */
+	font-weight: 400;
+}
+
+#banner_title {
+	width: 360px; /* Anchura del bloque */
+	padding: 10px; /* Relleno */
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICION DE CARRUSEL
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+#carrusel {
+	margin: auto;
+}
+
+#logos_patrocinadores {
+	margin: 54px auto;
+	background-image: url("../imagenes/carrusel_logos.png");
+	height: 100px;
+	animation: scroll-background 15s linear infinite; /* Aplica la animación */
+	padding: 15px;
+}
+
+@keyframes scroll-background {
+	0% {
+		background-position: 0 0; /* Posición inicial */
+	}
+	
+	100% {
+		background-position: 1000px 0; /* Mueve la imagen hacia la izquierda */
+	}
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICION DE PELÍCULAS PREMIADAS
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+#premiadas {
+	background-color: #70D3EA;
+}
+
+#premiadas_contenido h2 {
+	text-align: center;
+	padding: 35px;
+}
+
+.articulos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap; 
+	gap: 20px;
+}
+
+#premiadas_contenido article{
+	border-radius:25px;
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+}
+
+.texto_peli {
+	font-size: 11pt; /* Tamaño de fuente */
+	padding: 5px 10px;
+	margin: 0;
+}
+
+.titulo_peli {
+	font-size: 16pt; /* Tamaño de fuente */
+	padding: 0 10px;
+	margin: 0;
+	font-weight: 600;
+}
+
+.poster1, .poster2, .poster3 {
+	margin: 0;
+	padding: 0;
+	width: 298px;
+	height: 180px;
+	border-radius: 24px 24px 0 0;
+	background-image: url("../imagenes/evil.jpg");
+	background-position: center center;
+	background-size: 110%;
+}
+
+.poster2 {
+	background-image: url("../imagenes/polter.jpg");
+}
+
+.poster3 {
+	background-image: url("../imagenes/cumbre.jpg");
+}
+
+.enlace_bloque {
+	display: block;
+	text-align: center;
+	padding: 45px;
+}
+.enlace_bloque a {
+	font-weight: 600;
+	font-size: 13pt; /* Tamaño de fuente */
+	Color: black;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICION DE ACCESO A LA PROGRAMACION
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+#accede_programacion{
+	padding: 20px 30px 100px 0;
+}
+
+#accede_programacion{
+	Color: white;
+}
+
+#accede_programacion h2 {
+	text-align: center;
+	padding: 30px;
+}
+
+#accede_programacion hr {
+	width: 320px;
+}
+
+#accede_programacion p {
+	margin: auto;
+	text-align: center;
+	padding: 30px;
+	max-width: 640px;
+}
+
+#accede_programacion button {
+	margin: auto;
+	display: block;
+}
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICIÓN DE FOOTER
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+#suscrip_patroci {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100vw;
+	background: linear-gradient(to bottom, #70D3EA 50%, #092F38 50%);
+}
+
+/*                           SUSCRIBETE                                  */
+
+#suscripcion {
+	background-color: #70D3EA;
+}
+
+#newsletter_form {
+	max-width: 460px;
+	padding:  20px 0;
+}
+
+#newsletter_form > *{
+	display: block;
+	max-width: 400px;
+	padding: 10px;
+	margin: auto;
+}
+
+#privacidad{
+	padding: 10px 0 ;
+	width: 370px;
+}
+
+#newsletter_form form > * {
+	display: block;
+	max-width: 400px;
+	font-size: 11pt;
+}
+
+#newsletter_form h2 {
+	text-align: center;
+}
+
+input[type="text"], input[type="email"]  {
+	border-radius: 20px;
+	border: 1px solid black;
+	width: 360px;
+	height: 20px;
+}
+
+#newsletter_form form button {
+	margin: 8px auto;
+	font-size: 13pt;
+}
+
+#social-list {
+	justify-content: center;
+	font-size: 18pt;
+}
+
+
+/*                           PATROCINADORES                                  */
+
+
+#patrocinadores {
+	background-color: #092F38;
+}
+
+#patro_contenido {
+	max-width: 460px;
+	padding: 0 0 123px 0;
+}
+
+#patro_contenido > * {
+	width: 400px;
+}
+
+#patro_contenido h3 {
+	Color: white;
+	text-align: center;
+	font-family: "Inknut Antiqua", sans-serif;
+	padding: 10px;
+}
+
+#patro_contenido img {
+	width:100px;
+	height:100px;
+}
+
+#patro_contenido nav {
+	display: flex;
+	justify-content: center;
+	max-width: 400px;
+	margin: auto;
+}
+
+#patro_contenido ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width:320px;
+	gap: 2px 6px;
+
+}
+
+
+/*                            ENLACES VARIOS                                  */
+
+#enlacesV {
+	background-color: black;
+	padding: 20px;
+}
+#enlacesV ul {
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#enlacesV li {
+	width: 320px;
+	text-align: center;
+}
+
+#enlacesV a {
+	color: white;
+}
+/*                              COPY RIGHT                                    */
+
+
+#cright {
+	background-color: #70D3EA;
+	margin: auto;
+	text-align:center;
+	padding: 6px;
+}
+
+#cright p {
+	font-size: 11pt;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											MODO ESCRITORIO
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+@media (min-width: 768px) {
+		
+	.toggle-button {
+		display: none;
+	}
+
+	.menu-links {
+		display:flex;
+		gap: 20px;
+		padding: 0;
+		margin: 0;
+	}
+
+	.menu-links a {
+		font-weight: 600;
+		font-size: 14pt; /* Tamaño de fuente */
+	}
+
+	.mobile-menu {
+		display: none;
+	}
+	
+	.icon-label {
+		display: inline; /* Mostrar etiquetas de Carro y Cuenta */
+		font-size: 1rem; /* Tamaño de fuente */
+	}
+	
+	.icons {
+		gap: 25px; /* Ajuste de espacio para escritorio */
+	}
+	
+	#banner_title {
+		width: 640px; /* Anchura del bloque */
+		height: 480px; /* Altura del bloque */
+		padding: 10px; /* Relleno */
+	}
+	
+	#banner h1 {
+		font-family: "Rye", serif;
+		font-size: 40pt; /* Tamaño de fuente */
+		margin-top: 220px;
+		font-weight: 400;
+	}
+	
+	#suscrip_patroci {
+		background: linear-gradient(to right, #70D3EA 50%, #092F38 50%);
+	}
+	
+}
