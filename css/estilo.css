@@ -434,7 +434,8 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 */
 
 #accede_programacion{
-	padding: 30px 20px 100px 20px;
+	padding: 30px 0 100px 0;
+	margin: auto;
 }
 
 #accede_programacion{
