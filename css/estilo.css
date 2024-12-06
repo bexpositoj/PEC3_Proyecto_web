@@ -438,7 +438,7 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 */
 
 #accede_programacion{
-	padding: 20px 30px 100px 0;
+	padding: 30px 0 100px 0;
 }
 
 #accede_programacion{
@@ -498,7 +498,7 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 	margin: auto;
 }
 
-#privacidad{
+#privacidad {
 	padding: 10px 0 ;
 	max-width: 460px;
 }
@@ -511,6 +511,10 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 
 #newsletter_form h2 {
 	text-align: center;
+}
+
+#newsletter_form span {
+	font-size: 11pt;
 }
 
 input[type="text"], input[type="email"]  {
@@ -537,15 +541,16 @@ input[type="text"], input[type="email"]  {
 #patrocinadores {
 	background-color: #092F38;
 	padding: 0 20px;
+	max-width: 460px;
 }
 
 #patro_contenido {
-	max-width: 460px;
-	padding: 0 0 123px 0;
+	padding: 0 0 103px 0;
+	width: 100%;
 }
 
 #patro_contenido > * {
-	max-width: 360px;
+	width: 100%;
 }
 
 #patro_contenido h3 {
@@ -556,14 +561,13 @@ input[type="text"], input[type="email"]  {
 }
 
 #patro_contenido img {
-	width: 90px;
-	height: 90px;
+	max-width: 100px;
+	max-height: 100px;
 }
 
 #patro_contenido nav {
 	display: flex;
 	justify-content: center;
-	max-width: 460px;
 	margin: auto;
 }
 
@@ -571,7 +575,6 @@ input[type="text"], input[type="email"]  {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	max-width:320px;
 	gap: 4px 8px;
 }
 
@@ -668,17 +671,12 @@ input[type="text"], input[type="email"]  {
 	}
 
 	#patrocinadores {
-		padding: 0 50px;
+		padding: 0 100px;
+		max-width: 560px;
 	}
-	
-	#patro_contenido img {
-		width:100px;
-		height:100px;
-	}
-	
+		
 	#patro_contenido ul {
 		gap: 4px 8px;
 	}
 
 }
-
