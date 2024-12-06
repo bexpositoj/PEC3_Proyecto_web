@@ -12,10 +12,6 @@
 ------------------------------------------------------------------------------------------------------------------------
 */
 
-html, body {
-	overflow-x: hidden; /* Evita el scroll horizontal */
-}
-
 * {	box-sizing: border-box; }/* incluir el padding y el borde en el ancho y alto total de los elementos */
 
 h2 {
@@ -438,7 +434,7 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 */
 
 #accede_programacion{
-	padding: 30px 0 100px 0;
+	padding: 30px 20px 100px 20px;
 }
 
 #accede_programacion{
