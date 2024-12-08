@@ -12,6 +12,10 @@
 ------------------------------------------------------------------------------------------------------------------------
 */
 
+html, body {
+	overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
 * {	box-sizing: border-box; }/* incluir el padding y el borde en el ancho y alto total de los elementos */
 
 h2 {
@@ -42,7 +46,7 @@ a:visited {
 }
 
 button {
-	background-color: #1FA2C0; /* Color de fondo */
+	background-color: #15697C; /* Color de fondo */
 	color: white; /* Color del texto */
 	padding: 3px 20px; /* Espaciado dentro del botón */
 	font-size: 13pt; /* Tamaño del texto */
@@ -54,7 +58,7 @@ button {
 }
 
 button:hover {
-	background-color: #1FA2C0; /* Cambia el color cuando el ratón pasa sobre él */
+	background-color: #15697C; /* Cambia el color cuando el ratón pasa sobre él */
 	border-color: white;
 }
 
@@ -374,12 +378,11 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 	gap: 20px;
 }
 
-#premiadas_contenido article{
-	border-radius:25px;
+#premiadas_contenido article, .carrusel li{
+	border-radius: 28px 28px 20px 20px;
 	padding: 0;
 	margin: 0;
 	background-color: white;
-	border: 1px solid black;
 	width: 300px;
 	height: 300px;
 }
@@ -397,12 +400,12 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 	font-weight: 600;
 }
 
-.poster1, .poster2, .poster3 {
+.poster1, .poster2, .poster3, .poster4, .poster5 {
 	margin: 0;
 	padding: 0;
-	width: 298px;
+	width: 300px;
 	height: 180px;
-	border-radius: 24px 24px 0 0;
+	border-radius: 20px 20px 0 0;
 	background-image: url("../imagenes/evil.jpg");
 	background-position: center center;
 	background-size: 110%;
@@ -414,6 +417,14 @@ main {	padding-top: 60px; /* Relleno en la parte superior destinada al header */
 
 .poster3 {
 	background-image: url("../imagenes/cumbre.jpg");
+}
+
+.poster4 {
+	background-image: url("../imagenes/phenom.jpg");
+}
+
+.poster5 {
+	background-image: url("../imagenes/13.jpg");
 }
 
 .enlace_bloque {
@@ -609,6 +620,64 @@ input[type="text"], input[type="email"]  {
 	font-size: 11pt;
 }
 
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+											DEFINICIÓN DE LA PÁGINA DE PROGRAMACIÓN
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* SLIDER  https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/  */
+
+#filtros {
+	padding: 35px;
+}
+
+#filtros ul {
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+
+#filtros li{
+	background-color: #70D3EA;
+	border-radius: 6px;
+	padding: 4px 15px;
+	font-size: 11pt;
+	font-weight: 600;
+}
+
+.carrusel {
+	margin: auto;
+	overflow: hidden;
+	max-width: 300px;
+}
+
+.titulo_programa {
+	color: white;
+	margin:  0 20px 20px 20px;
+}
+
+.carrusel ul {
+	gap: 10px;
+	position: relative; /* Importante para usar 'left' */
+}
+
+.flechas-carrusel {
+	margin: auto;
+	text-align: center;
+	padding: 10px 0 30px 0;
+}
+
+.flechas-carrusel button{
+	padding: 10px 18px;
+	border-radius: 50%;
+	font-size: 18pt;
+}
+
+
+
+
 /*
 ------------------------------------------------------------------------------------------------------------------------
 											MODO ESCRITORIO
@@ -676,4 +745,9 @@ input[type="text"], input[type="email"]  {
 		gap: 4px 8px;
 	}
 
+	.carrusel {
+		max-width: 920px;
+	}
+
 }
+
