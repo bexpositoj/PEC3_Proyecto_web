@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Mobile First Page</title>
+		<title>Paranormal Film Festival</title>
 		<link rel="stylesheet" href="./css/estilo.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,230 @@
 		</header>
 			
 		<main aria-label="Main content">
+			<section id="filtros" class="container" aria-label="Tags de filtros">
+				<nav>
+					<ul>
+						<li><a href="#filtro">Todo</a></li>
+						<li><a href="#filtro">Terror</a></li>
+						<li><a href="#filtro">Thriller</a></li>
+						<li><a href="#filtro">Comedia</a></li>
+						<li><a href="#filtro">Gore</a></li>
+						<li><a href="#filtro">Drama</a></li>
+						<li><a href="#filtro">Premiadas</a></li>
+					</ul>
+				</nav>
+			</section>
+			
+			<section class="container" aria-label="Películas día 1">
+				<h2 class="titulo_programa" >Día 1</h2>
+				<nav class="carrusel">
+					<ul id="dia1" >
+						<li>
+							<a href="./ficha.html"><div class="poster1" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Evil dead 2</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li >
+							<a href="./ficha.html"><div class="poster2" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Poltergeist</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster3" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">La cumbre escarlata</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster4" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Phenomena</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster5" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">13 fantasmas</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">18:00 a 20:00</p>
+						</li>
+					</ul>
+				</nav>
+				<div class="flechas-carrusel">
+					<button class="prev" onclick="moverIzquierdaDia(1)"><i class="fa-solid fa-angle-left"></i></button>
+					<button class="next" onclick="moverDerechaDia(1)"><i class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</section>
 		
+			<section class="container" aria-label="Películas día 2">
+				<h2 class="titulo_programa" >Día 2</h2>
+				<nav class="carrusel">
+					<ul id="dia2" >
+						<li>
+							<a href="./ficha.html"><div class="poster1" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Evil dead 2</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li >
+							<a href="./ficha.html"><div class="poster2" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Poltergeist</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster3" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">La cumbre escarlata</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster4" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Phenomena</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster5" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">13 fantasmas</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">18:00 a 20:00</p>
+						</li>
+					</ul>
+				</nav>
+				<div class="flechas-carrusel">
+					<button class="prev" onclick="moverIzquierdaDia(2)"><i class="fa-solid fa-angle-left"></i></button>
+					<button class="next" onclick="moverDerechaDia(2)"><i class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</section>
+			
+			<section class="container" aria-label="Películas día 3">
+				<h2 class="titulo_programa" >Día 3</h2>
+				<nav class="carrusel">
+					<ul id="dia3" >
+						<li>
+							<a href="./ficha.html"><div class="poster1" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Evil dead 2</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li >
+							<a href="./ficha.html"><div class="poster2" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Poltergeist</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster3" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">La cumbre escarlata</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster4" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Phenomena</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster5" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">13 fantasmas</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">18:00 a 20:00</p>
+						</li>
+					</ul>
+				</nav>
+				<div class="flechas-carrusel">
+					<button class="prev" onclick="moverIzquierdaDia(3)"><i class="fa-solid fa-angle-left"></i></button>
+					<button class="next" onclick="moverDerechaDia(3)"><i class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</section>
+			
+			<section class="container" aria-label="Películas día 4">
+				<h2 class="titulo_programa" >Día 4</h2>
+				<nav class="carrusel">
+					<ul id="dia4" >
+						<li>
+							<a href="./ficha.html"><div class="poster1" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Evil dead 2</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li >
+							<a href="./ficha.html"><div class="poster2" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Poltergeist</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster3" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">La cumbre escarlata</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster4" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Phenomena</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster5" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">13 fantasmas</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">18:00 a 20:00</p>
+						</li>
+					</ul>
+				</nav>
+				<div class="flechas-carrusel">
+					<button class="prev" onclick="moverIzquierdaDia(4)"><i class="fa-solid fa-angle-left"></i></button>
+					<button class="next" onclick="moverDerechaDia(4)"><i class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</section>
+			
+			<section class="container" aria-label="Películas día 5">
+				<h2 class="titulo_programa" >Día 5</h2>
+				<nav class="carrusel">
+					<ul id="dia5" >
+						<li>
+							<a href="./ficha.html"><div class="poster1" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Evil dead 2</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li >
+							<a href="./ficha.html"><div class="poster2" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Poltergeist</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">10:00 a 12:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster3" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">La cumbre escarlata</h3>
+							<p class="texto_peli">Sala 2</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster4" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">Phenomena</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">14:00 a 16:00</p>
+						</li>
+						<li>
+							<a href="./ficha.html"><div class="poster5" aria-label="Poster película"></div></a>
+							<h3 class="titulo_peli">13 fantasmas</h3>
+							<p class="texto_peli">Sala 1</p>
+							<p class="texto_peli">18:00 a 20:00</p>
+						</li>
+					</ul>
+				</nav>
+				<div class="flechas-carrusel">
+					<button class="prev" onclick="moverIzquierdaDia(5)"><i class="fa-solid fa-angle-left"></i></button>
+					<button class="next" onclick="moverDerechaDia(5)"><i class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</section>
+			
 		
 		</main>
 		
