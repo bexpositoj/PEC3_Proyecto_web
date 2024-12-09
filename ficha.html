@@ -33,8 +33,8 @@
 				
 				<div class="header-derecho">
 				
-					<div><a href="#home" id="icon1"><i class="fas fa-shopping-cart"></i></a> <a href="#home" class="icon-label"> Carro</a></div>
-					<div><a href="#home" id="icon2"><i class="fa-solid fa-user"></i></a> <a href="#home" class="icon-label"> Cuenta</a></div>
+					<div><a href="./index.html" id="icon1" aria-label="Carro de la compra"><i class="fas fa-shopping-cart"></i></a> <a href="./index.html" class="icon-label"> Carro</a></div>
+					<div><a href="./index.html" id="icon2" aria-label="Cuenta de usuario"><i class="fa-solid fa-user"></i></a> <a href="./index.html" class="icon-label"> Cuenta</a></div>
 					
 					<input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" >
 					<label for="abrir-cerrar" class="toggle-button">
@@ -80,8 +80,9 @@
 					<p>Bruce Campbell</p><p>Sarah Berry</p><p>Dan Hicks</p><p>Denis Bixler</p>
 				</div>
 				
-				<div id="reserva" class="columna">
-					<select>
+				<form id="reserva" class="columna">
+					
+					<select class="desplegables">
 						<option value="1">Día 1</option>
 						<option value="2">Día 2</option>
 						<option value="3">Día 3</option>
@@ -89,7 +90,7 @@
 						<option value="5">Día 5</option>
 					</select>
 					
-					<select>
+					<select class="desplegables">
 						<option value="1">Sala 1</option>
 						<option value="2">Sala 2</option>
 					</select>
@@ -97,11 +98,11 @@
 						<!-- Encabezado de la tabla -->
 						<thead>
 							<tr>
-								<th></th>
+								<th class="vacio">.</th>
 								<th>1</th>
 								<th>2</th>
 								<th>3</th>
-								<th></th>
+								<th class="vacio">.</th>
 								<th>4</th>
 								<th>5</th>
 								<th>6</th>
@@ -111,69 +112,69 @@
 						<tbody>
 							<tr>
 								<th>6</th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
-								<th></th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
+								<th class="asiento"><input id="asiento6_1"  name="asiento6_1" type="checkbox" value="" ><label for="asiento6_1">.</label></th>
+								<th class="asiento"><input id="asiento6_2"  name="asiento6_2" type="checkbox" value="" ><label for="asiento6_2">.</label></th>
+								<th class="asiento"><input id="asiento6_3"  name="asiento6_3" type="checkbox" value="" ><label for="asiento6_3">.</label></th>
+								<th class="vacio">.</th>
+								<th class="asiento"><input id="asiento6_4"  name="asiento6_4" type="checkbox" value="" ><label for="asiento6_4">.</label></th>
+								<th class="asiento"><input id="asiento6_5"  name="asiento6_5" type="checkbox" value="" ><label for="asiento6_5">.</label></th>
+								<th class="asiento"><input id="asiento6_6"  name="asiento6_6" type="checkbox" value="" ><label for="asiento6_6">.</label></th>
 							</tr>
 							<tr>
 								<th>5</th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
-								<th></th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
+								<th class="asiento"><input id="asiento5_1"  name="asiento5_1" type="checkbox" value="" ><label for="asiento5_1">.</label></th>
+								<th class="asiento"><input id="asiento5_2"  name="asiento5_2" type="checkbox" value="" ><label for="asiento5_2">.</label></th>
+								<th class="asiento"><input id="asiento5_3"  name="asiento5_3" type="checkbox" value="" ><label for="asiento5_3">.</label></th>
+								<th class="vacio">.</th>
+								<th class="asiento"><input id="asiento5_4"  name="asiento5_4" type="checkbox" value="" ><label for="asiento5_4">.</label></th>
+								<th class="asiento"><input id="asiento5_5"  name="asiento5_5" type="checkbox" value="" ><label for="asiento5_5">.</label></th>
+								<th class="asiento"><input id="asiento5_6"  name="asiento5_6" type="checkbox" value="" ><label for="asiento5_6">.</label></th>
 							</tr>
 							<tr>
 								<th>4</th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
-								<th></th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
+								<th class="asiento"><input id="asiento4_1"  name="asiento4_1" type="checkbox" value="" ><label for="asiento4_1">.</label></th>
+								<th class="asiento"><input id="asiento4_2"  name="asiento4_2" type="checkbox" value="" ><label for="asiento4_2">.</label></th>
+								<th class="asiento"><input id="asiento4_3"  name="asiento4_3" type="checkbox" value="" ><label for="asiento4_3">.</label></th>
+								<th class="vacio">.</th>
+								<th class="asiento"><input id="asiento4_4"  name="asiento4_4" type="checkbox" value="" ><label for="asiento4_4">.</label></th>
+								<th class="asiento"><input id="asiento4_5"  name="asiento4_5" type="checkbox" value="" ><label for="asiento4_5">.</label></th>
+								<th class="asiento"><input id="asiento4_6"  name="asiento4_6" type="checkbox" value="" ><label for="asiento4_6">.</label></th>
 							</tr>
 							<tr>
 								<th>3</th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
-								<th></th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
+								<th class="asiento"><input id="asiento3_1"  name="asiento3_1" type="checkbox" value="" ><label for="asiento3_1">.</label></th>
+								<th class="asiento"><input id="asiento3_2"  name="asiento3_2" type="checkbox" value="" ><label for="asiento3_2">.</label></th>
+								<th class="asiento"><input id="asiento3_3"  name="asiento3_3" type="checkbox" value="" ><label for="asiento3_3">.</label></th>
+								<th class="vacio">.</th>
+								<th class="asiento"><input id="asiento3_4"  name="asiento3_4" type="checkbox" value="" ><label for="asiento3_4">.</label></th>
+								<th class="asiento"><input id="asiento3_5"  name="asiento3_5" type="checkbox" value="" ><label for="asiento3_5">.</label></th>
+								<th class="asiento"><input id="asiento3_6"  name="asiento3_6" type="checkbox" value="" ><label for="asiento3_6">.</label></th>
 							</tr>
 							<tr>
 								<th>2</th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
-								<th></th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
+								<th class="asiento"><input id="asiento2_1"  name="asiento2_1" type="checkbox" value="" ><label for="asiento2_1">.</label></th>
+								<th class="asiento"><input id="asiento2_2"  name="asiento2_2" type="checkbox" value="" ><label for="asiento2_2">.</label></th>
+								<th class="asiento"><input id="asiento2_3"  name="asiento2_3" type="checkbox" value="" ><label for="asiento2_3">.</label></th>
+								<th class="vacio">.</th>
+								<th class="asiento"><input id="asiento2_4"  name="asiento2_4" type="checkbox" value="" ><label for="asiento2_4">.</label></th>
+								<th class="asiento"><input id="asiento2_5"  name="asiento2_5" type="checkbox" value="" ><label for="asiento2_5">.</label></th>
+								<th class="asiento"><input id="asiento2_6"  name="asiento2_6" type="checkbox" value="" ><label for="asiento2_6">.</label></th>
 							</tr>
 							<tr>
 								<th>1</th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
-								<th></th>
-								<th>#</th>
-								<th>#</th>
-								<th>#</th>
+								<th class="asiento"><input id="asiento1_1"  name="asiento1_1" type="checkbox" value="" ><label for="asiento1_1">.</label></th>
+								<th class="asiento"><input id="asiento1_2"  name="asiento1_2" type="checkbox" value="" ><label for="asiento1_2">.</label></th>
+								<th class="asiento"><input id="asiento1_3"  name="asiento1_3" type="checkbox" value="" ><label for="asiento1_3">.</label></th>
+								<th class="vacio">.</th>
+								<th class="asiento"><input id="asiento1_4"  name="asiento1_4" type="checkbox" value="" ><label for="asiento1_4">.</label></th>
+								<th class="asiento"><input id="asiento1_5"  name="asiento1_5" type="checkbox" value="" ><label for="asiento1_5">.</label></th>
+								<th class="asiento"><input id="asiento1_6"  name="asiento1_6" type="checkbox" value="" ><label for="asiento1_6">.</label></th>
 							</tr>
 						</tbody>
 					</table>
-					<button type="button">Añadir al carro</button>
+					<button type="submit">Añadir al carro</button>
 				</div>
-			</section>
+			</form>
 			
 		</main>
 		

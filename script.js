@@ -2,6 +2,8 @@
 const clics  = [0, 0, 0, 0, 0, 3];
 const posiciones = [0, 0, 0, 0, 0, 0];
 
+
+
 function moverDerechaDia( dia ) {
 	
 	const carrusel = document.getElementById('dia' + dia);
@@ -23,6 +25,10 @@ function moverIzquierdaDia( dia ) {
 	} else {clics[dia-1] = 0}
 }
 
+
+
+
+
 function moverDerechaOrg() {
 	
 	const carrusel = document.getElementById('organiz_contenido');
@@ -43,3 +49,22 @@ function moverIzquierdaOrg() {
 		carrusel.style.left = posiciones[5] + 'px'; // Actualizar la propiedad 'left'
 	} else {clics[5] = 0}
 }
+
+
+
+// Seleccionar todos los checkboxes
+const checkboxes = document.querySelectorAll('.asiento input[type="checkbox"]');
+
+// Recorrer todos los checkboxes y añadirles un evento de clic
+checkboxes.forEach(function(checkbox) {
+  const label = document.querySelector(`label[for="${checkbox.id}"]`);
+  
+  checkbox.addEventListener('click', function() {
+    // Cambiar el color de fondo del label al hacer clic
+    if (checkbox.checked) {
+      label.style.backgroundColor = '#00AA00'; // Cambia el color de fondo
+    } else {
+      label.style.backgroundColor = 'white'; // Restablece el color de fondo
+    }
+  });
+});
